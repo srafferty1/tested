@@ -1,0 +1,29 @@
+[global]
+        workgroup = WORKGROUP
+        netbios name = SAMBA
+        security = user
+        log file = /var/log/samba/%m.log
+        log level = 3
+        passdb backend = tdbsam
+        printing = cups
+        printcap name = cups
+        load printers = no
+        cups options = raw
+        username map = /etc/samba/smbusers
+        server min protocol = SMB2
+        server max protocol = SMB3
+
+[nms_share]
+        path = /data/csv_sources/nms_share
+        browsable = yes
+        writable = yes
+        guest ok = no
+        public = no
+        read only = no
+        valid users = nms-admin
+[public]
+       comment = Public Stuff
+       path = /home/samba
+       public = yes
+       writable = no
+       printable = no
