@@ -1,0 +1,4 @@
+# /etc/samba/smbusers
+# Windows user (SID) to Linux user mapping
+#nms-admin = DOMAIN\username
+nms-admin = srafferty
